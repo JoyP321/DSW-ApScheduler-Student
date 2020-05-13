@@ -20,7 +20,7 @@ def welcome():
 def my_task():
     return render_template('home.html', content = 'task exacuted')
   
-scheduler.add_job(my_task, trigger='cron', hour=16, minute=40)  
+scheduler.add_job(my_task, trigger='cron', hour=16, minute=49)  
 
 
 
