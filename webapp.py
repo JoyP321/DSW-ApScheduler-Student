@@ -10,7 +10,7 @@ app = Flask(__name__)
 #TODO: add the code for the ApScheduler here
 scheduler = BackgroundScheduler({'apscheduler.timezone':'America/Los_Angeles'})
 scheduler.start()
-session['taskCount']= 0
+
 
 @app.route('/')
 def welcome():
@@ -18,8 +18,7 @@ def welcome():
  
  
 def my_task():
-    session['taskCount'] = session['taskCount']+1
-    return render_template('home.html', content = 'task count' +str(session['taskCount']))
+    return render_template('home.html', content = 'task exacuted'))
   
   
 scheduler.add_job(my_task, tigger= 'interval', minutes=1)
