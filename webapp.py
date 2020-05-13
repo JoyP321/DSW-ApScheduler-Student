@@ -16,7 +16,7 @@ scheduler.start()
 def welcome():
     return render_template('home.html', content = '')
  
- 
+@app.route('/uh') 
 def my_task():
     return render_template('home.html', content = 'task exacuted')
   
