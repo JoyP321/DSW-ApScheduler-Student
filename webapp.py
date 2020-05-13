@@ -8,7 +8,8 @@ import time
 app = Flask(__name__)
 
 #TODO: add the code for the ApScheduler here
-
+scheduler = BackgroundScheduler({'apscheduler.timezone':'America/Los_Angeles'})
+scheduler.start()
 
  
 @app.route('/')
