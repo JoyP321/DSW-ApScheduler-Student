@@ -18,7 +18,7 @@ def welcome():
  
  
 def my_task():
-    return render_template('home.html', content = 'task exacuted'))
+    return render_template('home.html', content = 'task exacuted')
   
   
 scheduler.add_job(my_task, tigger= 'interval', minutes=1)
