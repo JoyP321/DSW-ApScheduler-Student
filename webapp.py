@@ -16,11 +16,11 @@ scheduler.start()
 def welcome():
     return render_template('home.html', content = '')
  
-@app.route('/uh') 
+
 def my_task():
-    return render_template('home.html', content = 'task exacuted')
+    print('hello')
   
-scheduler.add_job(my_task, trigger='cron', hour=16, minute=49)  
+scheduler.add_job(my_task, 'interval', minutes=1/2)
 
 
 
